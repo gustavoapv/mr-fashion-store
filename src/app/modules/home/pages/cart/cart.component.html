@@ -1,0 +1,43 @@
+
+<h2>Carrito de compras</h2>
+<br>
+<table class="table"  *ngIf="cart.length > 0">
+    <tr>
+        <th></th>
+        <th>Prod</th>
+        <th>Desc</th> 
+        <th>Precio</th>
+    </tr>
+    <tr *ngFor="let product of cart; let i = index">
+        <td>
+           <button type="button" (click)="remove(index)" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+            </button>
+        </td>
+        <td>    
+          <img class="align-self-center" 
+           [src]="product.img" width="20" >
+        </td>
+        <td>{{product.desc}}</td>
+        <td>{{product.price}}</td>
+    </tr>
+</table>
+
+<div *ngIf="cart.length > 5" >
+    <div class="alert alert-danger" role="alert">
+        Para finalizar la orden debes elegir máximo 5 productos
+      </div>
+</div>
+
+<div *ngIf="cart.length === 0" >
+        <div class="alert alert-danger" role="alert">
+             Debes agregar productos a el carrito de compras
+          </div>
+    </div>
+
+<div *ngIf="cart.length > 0 && cart.length < 6" >
+<button type="button" (click)="goToCheckout()"  class="btn btn-primary btn-lg btn-block">Finalizar la compra</button>
+</div>
+
+
+

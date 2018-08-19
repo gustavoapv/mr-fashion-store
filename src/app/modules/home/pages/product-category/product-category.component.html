@@ -1,0 +1,10 @@
+<div class="responsive" *ngFor="let product of products">
+    <div class="gallery">
+        <img [src]="product.img" width="600" height="400">
+        <div class="desc">{{ product.desc }} 
+          $ {{ product.price }}</div>
+        <div class="desc">
+            <button type="button" class="btn btn-outline-primary btn-sm" (click)="addToCart(product)">Agregar al carrito de compras</button>
+        </div>
+    </div>
+</div>
