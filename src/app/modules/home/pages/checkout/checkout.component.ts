@@ -22,6 +22,9 @@ export class CheckoutComponent implements OnInit {
 
   constructor(private calendar: NgbCalendar, private router:Router) { }
 
+  /**
+   * Setup product quantity and total of order from local storage
+   */
   ngOnInit() {
     var storedCart: Array<Product> = JSON.parse(localStorage.getItem("cart"));
     this.order.productQuantity = storedCart.length

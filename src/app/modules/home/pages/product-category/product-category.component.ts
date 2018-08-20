@@ -19,6 +19,11 @@ export class ProductCategoryComponent implements OnInit {
     this.products = this.products.filter(p => (p.category.includes(this.router.url.replace("/", ""))))
   }
 
+  /**
+   * 
+   * @param product 
+   * Validate existence of local store and push element
+   */
   addToCart(product: Product) {
     var storedCart = JSON.parse(localStorage.getItem("cart"));
     if (storedCart === null) {
