@@ -33,7 +33,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(
-      appRoutes
+      appRoutes, { useHash :true }
     ),
     UiModule,
     FormsModule,
