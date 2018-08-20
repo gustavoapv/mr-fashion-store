@@ -1,3 +1,73 @@
-<p>
-  checkout works!
-</p>
+<!-- main app container -->
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+          <h2>Mr. Fashion</h2>
+          <h5>Recuerde que el pago de el pedidos se realiza contra entrega</h5>
+          <br>
+        <h3>Realizar Pedido</h3>
+        <form (submit)="onSubmit()">
+          <div class="form-group">
+            <label for="name">Nombre*</label>
+            <input type="text" class="form-control" id="name" required [(ngModel)]="order.name" name="name">
+          </div>
+
+          <div class="form-group">
+            <label for="idCardTypes">Tipo de documento*</label>
+            <select class="form-control" id="idCardTypes" required [(ngModel)]="order.idCardType" name="idCardTypes">
+              <option *ngFor="let idcard of idCardTypes" [value]="idcard">{{idcard}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="idCard">Número de identificación*</label>
+            <input type="text" class="form-control" id="idCard" required [(ngModel)]="order.idCard" name="idCard">
+          </div>
+
+          <div class="form-group">
+            <label for="productQuantity">Cantidad de productos</label>
+            <input type="text" class="form-control" disabled id="productQuantity" required [(ngModel)]="order.productQuantity" name="productQuantity">
+          </div>
+
+          <div class="form-group">
+            <label for="idCard">Fecha de entrega*</label>
+            <div class="input-group">
+              <input class="form-control" placeholder="año-mm-dd" name="dp" [(ngModel)]="order.deliveryDate" ngbDatepicker #d="ngbDatepicker">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+                  <img src="assets/img/calendar-icon.png" width="30" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="deliveryHour">Hora de entrega</label>
+            <select class="form-control" id="deliveryHour" required [(ngModel)]="order.deliveryHour" name="deliveryHour">
+              <option *ngFor="let hour of deliveryHour" [value]="deliveryHour">{{hour}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="address">Dirección*</label>
+            <input type="text" class="form-control" id="address" required [(ngModel)]="order.address" name="address">
+          </div>
+
+          <div class="form-group">
+            <label for="total">Total</label>
+            <input type="text" disabled class="form-control" id="total" required [(ngModel)]="order.total" name="total">
+          </div>
+
+          <div>El precio del transporte no está incluido y dependerá del lugar de entrega, este se deberá cancelar junto con el
+            valor del pedido en el momento de la entrega.
+          </div>
+
+
+          <button type="submit" class="btn btn-primary">Enviar</button>
+
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

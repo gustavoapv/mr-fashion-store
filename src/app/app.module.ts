@@ -8,7 +8,9 @@ import { CartComponent } from './modules/home/pages/cart/cart.component';
 import { InicioComponent } from './modules/home/pages/inicio/inicio.component';
 import { CheckoutComponent } from './modules/home/pages/checkout/checkout.component';
 import { ProductCategoryComponent } from './modules/home/pages/product-category/product-category.component';
-
+import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ThanksComponent } from './modules/home/pages/thanks/thanks.component';
 
 const appRoutes: Routes = [
   { path: '', component: InicioComponent},
@@ -16,7 +18,8 @@ const appRoutes: Routes = [
   { path: 'pants', component: ProductCategoryComponent},
   { path: 'jackets', component: ProductCategoryComponent},
   { path: 'cart', component: CartComponent},
-  { path: 'checkout', component: CheckoutComponent}
+  { path: 'checkout', component: CheckoutComponent},
+  { path: 'thanks', component: ThanksComponent}
 ];
 
 @NgModule({
@@ -25,7 +28,8 @@ const appRoutes: Routes = [
     CartComponent,
     InicioComponent,
     CheckoutComponent,
-    ProductCategoryComponent
+    ProductCategoryComponent,
+    ThanksComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +37,8 @@ const appRoutes: Routes = [
       appRoutes
     ),
     UiModule,
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

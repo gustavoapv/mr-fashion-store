@@ -36,7 +36,7 @@
     </div>
 
 <div *ngIf="cart.length > 0 && cart.length < 6" >
-<button type="button" (click)="goToCheckout()"  class="btn btn-primary btn-lg btn-block">Finalizar la compra</button>
+    <a routerLink="/checkout"><button type="button"  class="btn btn-primary btn-lg btn-block">Finalizar la compra</button></a>
 </div>
 
 

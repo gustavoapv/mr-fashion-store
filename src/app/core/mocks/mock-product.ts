@@ -5,7 +5,7 @@ export const PRODUCTS: Product[] = [
     {
         id:"",
         desc: "Camisa Blanca",
-        price: "70.000",
+        price: "60.000",
         category : "shirts",
         img: "https://cdn.shopify.com/s/files/1/2397/7417/products/emf37csa021_blanco_frente_1024x1024.jpg"
     },

@@ -16,7 +16,7 @@ export class ProductCategoryComponent implements OnInit {
 
   }
   ngOnInit() {
-    this.products = this.products.filter(p => (p.category.includes(this.router.url.replace("/", ""))));
+    this.products = this.products.filter(p => (p.category.includes(this.router.url.replace("/", ""))))
   }
 
   addToCart(product: Product) {
