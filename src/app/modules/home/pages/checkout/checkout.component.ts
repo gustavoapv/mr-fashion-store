@@ -53,8 +53,9 @@ export class CheckoutComponent implements OnInit {
       alert("Debe ingresar una dirección");
       return false;
     }
+    
+    localStorage.setItem("cart", null);
     this.router.navigateByUrl('/thanks');
-
   }
 
 }

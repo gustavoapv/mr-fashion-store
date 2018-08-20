@@ -19,6 +19,8 @@ export class HeaderComponent implements OnInit {
     var storedCart:Array<Product> = JSON.parse(localStorage.getItem("cart"));
     if(!(storedCart === null)){
             return storedCart.length
+    }else{
+      return 0;
     }
 }
 
