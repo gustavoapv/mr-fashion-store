@@ -18,7 +18,7 @@ export class CheckoutComponent implements OnInit {
     "14:00", "15:00 ", "16:00", "17:00", "18:00"];
 
   idCardTypes = ['Cédula de ciudadanía', 'Tarjeta de identidad',
-    'Pasaporte', 'Cédula de extrangeria'];
+    'Pasaporte', 'Cédula de extranjería'];
 
   constructor(private calendar: NgbCalendar, private router:Router) { }
 

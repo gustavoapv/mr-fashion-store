@@ -1,7 +1,7 @@
-<div>
+
 <div class="responsive" *ngFor="let product of products">
     <div class="gallery">
-        <img [src]="product.img" width="600" height="400">
+        <img [src]="product.img">
         <div class="desc">{{ product.desc }} 
           $ {{ product.price }}</div>
         <div class="desc">
@@ -9,5 +9,5 @@
         </div>
     </div>
 </div>
-</div> 
-<br><br><br><br>
+
+
